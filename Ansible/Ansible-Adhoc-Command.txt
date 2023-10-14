@@ -9,6 +9,6 @@ ansible laraib-server -m shell -a "rmdir laraib-server"
 ansible laraib-server -m copy -a "src=/etc/ansible/sample.txt dest=/home/ansadmin" --> copy file from source to destination(remote server)
 ansible laraib-server -m yum -a "name=httpd state=present" -b -- > Install a software (httpd) on remote machine
 ansible laraib-server -m service -a "name=httpd state=started" -b -- > start the service on worker node
-ansible laraib-server -m user -a "name=vikas" -b --> Create a new user
-ansible laraib-server -m user -a "name=vikas state=absent" -b --> delete the user
+ansible laraib-server -m user -a "name=laraib" -b --> Create a new user
+ansible laraib-server -m user -a "name=laraib state=absent" -b --> delete the user
 ansible laraib-server -a "/sbin/reboot" -b  --> reboot command
