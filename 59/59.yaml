@@ -1,0 +1,13 @@
+---
+ - name: variable-playbook
+   hosts: server-2
+   vars:
+     name: laraib
+     number: 23
+   tasks:
+     - name: using debug module
+       debug:
+         msg: "The value of number is: {{number}}" #string interpolation/jinja template
+     - name: using debug module for name
+       debug:
+         msg: "Hello {{name}} !!!"

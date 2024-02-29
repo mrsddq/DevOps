@@ -45,9 +45,3 @@ item:
         yum:
           name: httpd
           state: latest
-
----
-- name: second-playbook
-  hosts: a-slave
-  be
-
