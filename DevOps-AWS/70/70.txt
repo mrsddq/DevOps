@@ -14,3 +14,4 @@ terraform --help
 terraform init
 terraform validate
 terraform plan
+terraform destory
