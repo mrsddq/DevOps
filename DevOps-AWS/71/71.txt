@@ -1,2 +1,9 @@
+mkdir terraform-project
+cd terraform-project
+terraform init
+ls -la
+
+
+
 terraform plan -out ready.txt
 
