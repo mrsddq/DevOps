@@ -10,6 +10,11 @@ terraform --version
 
 terraform --help
 
+mkdir s3-bucket
+cd s3-bucket
+
+nano main.tf
+
 //main.tf
 provider "aws" {
   region = "us-east-1"
@@ -27,4 +32,5 @@ resource "aws_s3_bucket" "b" {
 terraform init
 terraform validate
 terraform plan
+terraform apply
 terraform destory
