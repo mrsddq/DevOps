@@ -2,7 +2,8 @@ mkdir terraform-project
 cd terraform-project
 terraform init
 ls -la
-
+nano main.tf
+terraforn init
 provider "aws" {
   region = "us-east-1"
 }
@@ -15,6 +16,8 @@ resource "aws_s3_bucket" "b" {
     Environment = "Dev"
   }
 }
+terraform validate
+
 
 terraform plan -out ready.txt
 
