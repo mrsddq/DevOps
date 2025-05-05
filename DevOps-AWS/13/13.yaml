@@ -10,3 +10,68 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.104/bin/apache-tomcat-9.0.104
 tar -xvzf apache-tomcat-9.0.104.tar.gz
 rm -rf apache-tomcat-9.0.104.tar.gz
 mv apache-tomcat-9.0.104 tomcat
+
+cd tomcat
+cd bin
+./startup.sh
+
+ip:8080
+
+find / -name context.xml
+/opt/tomcat/conf/context.xml
+/opt/tomcat/webapps/docs/META-INF/context.xml
+/opt/tomcat/webapps/examples/META-INF/context.xml
+/opt/tomcat/webapps/host-manager/META-INF/context.xml
+/opt/tomcat/webapps/manager/META-INF/context.xml
+comment all the "127.*"
+
+cd bin
+./shutdown.sh
+./startup.sh
+
+cd ..
+cd conf
+
+nano tomcat-users.xml
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>  
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+<user username="tomcat" password="pass123" roles="manager-gui"/>
+
+cd ..
+cd bin
+./shutdown.sh
+./startup.sh
+
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+mvn archetype:generate -DgroupId=com.sample.webproject -DartifactId=my-app-demo -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+yum install tree -y
+
+ls
+tree my-demo-app
+create a new git repo
+
+cd my-demo-app
+git init
+git status
+git add .
+git commit -m "tomcat code added to git"
+git branch -M main
+git remote add origin https://github.com/mrsddq/my-app-demo.git
+git push -u origin main
+
+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
+
+git remote -v
+
+install the plugin in jenkins:
+
+git branch dev
+git branch 
+git branch -d dev
