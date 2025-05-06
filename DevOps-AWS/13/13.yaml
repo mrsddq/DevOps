@@ -65,16 +65,17 @@ git add .
 git commit -m "Initial commit"
 gh repo create my-repo-name --public --source=. --remote=origin --push
 
-
-
-cd my-app-demo
-git init
-git status
-git add .
-git commit -m "tomcat code added to git"
-git branch -M main
-git remote add origin https://github.com/mrsddq/my-app-demo.git
-git push -u origin main
+OR
+{
+  cd my-app-demo
+  git init
+  git status
+  git add .
+  git commit -m "tomcat code added to git"
+  git branch -M main
+  git remote add origin https://github.com/mrsddq/my-app-demo.git
+  git push -u origin main
+}
 
 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
 
