@@ -70,9 +70,7 @@ cd my-app-demo
 # git remote add origin https://github.com/mrsddq/my-app-demo.git
 # git push -u origin main
 
-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
 
-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
 
 git remote -v
 
