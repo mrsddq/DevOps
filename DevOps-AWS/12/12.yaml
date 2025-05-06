@@ -8,7 +8,7 @@ passwd jadmin
 visudo
 
 root ALL=(ALL)  ALL
-jenkins-admin ALL=(ALL) NOPASSWD: ALL
+jadmin ALL=(ALL) NOPASSWD: ALL
 
 esc :wq!
 

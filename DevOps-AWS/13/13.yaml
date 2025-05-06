@@ -18,11 +18,11 @@ cd bin
 ip:8080
 
 find / -name context.xml
-/opt/tomcat/conf/context.xml
-/opt/tomcat/webapps/docs/META-INF/context.xml
-/opt/tomcat/webapps/examples/META-INF/context.xml
-/opt/tomcat/webapps/host-manager/META-INF/context.xml
-/opt/tomcat/webapps/manager/META-INF/context.xml
+nano /opt/tomcat/conf/context.xml
+nano /opt/tomcat/webapps/docs/META-INF/context.xml
+nano /opt/tomcat/webapps/examples/META-INF/context.xml
+nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+nano /opt/tomcat/webapps/manager/META-INF/context.xml
 comment all the "127.*"
 
 cd bin
@@ -31,7 +31,6 @@ cd bin
 
 cd ..
 cd conf
-
 nano tomcat-users.xml
 
 <role rolename="manager-gui"/>
@@ -54,19 +53,26 @@ mvn archetype:generate -DgroupId=com.sample.webproject -DartifactId=my-app-demo 
 yum install tree -y
 
 ls
-tree my-demo-app
-create a new git repo
+tree my-app-demo
 
-cd my-demo-app
-git init
-git status
-git add .
-git commit -m "tomcat code added to git"
-git branch -M main
-git remote add origin https://github.com/mrsddq/my-app-demo.git
-git push -u origin main
+create a new git repo on github
+sudo curl -fsSL https://cli.github.com/packages/rpm/gh-cli.repo \
+  -o /etc/yum.repos.d/gh-cli.repo
+sudo yum install -y gh
+
+
+cd my-app-demo
+# git init
+# git status
+# git add .
+# git commit -m "tomcat code added to git"
+# git branch -M main
+# git remote add origin https://github.com/mrsddq/my-app-demo.git
+# git push -u origin main
 
 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
+
+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
 
 git remote -v
 
