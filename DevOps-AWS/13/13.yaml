@@ -59,6 +59,12 @@ create a new git repo on github
 sudo curl -fsSL https://cli.github.com/packages/rpm/gh-cli.repo \
   -o /etc/yum.repos.d/gh-cli.repo
 sudo yum install -y gh
+cd /path/to/your/project
+git init
+git add .
+git commit -m "Initial commit"
+gh repo create my-repo-name --public --source=. --remote=origin --push
+
 
 
 cd my-app-demo
