@@ -62,15 +62,15 @@ sudo yum install -y gh
 
 
 cd my-app-demo
-# git init
-# git status
-# git add .
-# git commit -m "tomcat code added to git"
-# git branch -M main
-# git remote add origin https://github.com/mrsddq/my-app-demo.git
-# git push -u origin main
+git init
+git status
+git add .
+git commit -m "tomcat code added to git"
+git branch -M main
+git remote add origin https://github.com/mrsddq/my-app-demo.git
+git push -u origin main
 
-
+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
 
 git remote -v
 
