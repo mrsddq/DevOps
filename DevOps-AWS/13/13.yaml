@@ -63,7 +63,7 @@ cd /path/to/your/project
 git init
 git add .
 git commit -m "Initial commit"
-gh repo create my-repo-name --public --source=. --remote=origin --push
+gh repo create my-app-demo --public --source=. --remote=origin --push
 
 OR
 {
@@ -77,7 +77,7 @@ OR
   git push -u origin main
 }
 
-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
+
 
 git remote -v
 
