@@ -1,3 +1,5 @@
+git-learning
+
 sudo su -
 hostname git-server
 sudo su -
@@ -6,7 +8,7 @@ yum install git -yum
 git clone https://github.com/mrsddq/gitpractice.git
 cd gitpractice
 git push
-in place of password PAT is utilised
+# in place of password PAT is utilised
 git log
 git status
 git log --oneline

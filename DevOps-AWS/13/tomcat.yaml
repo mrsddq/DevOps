@@ -1,5 +1,7 @@
 jenkins-architecture:source-control-management
 
+
+
 tomcat-server
   it is a web-server to java application
 
@@ -77,11 +79,10 @@ OR
   git push -u origin main
 }
 
-
-
 git remote -v
 
 install the plugin in jenkins:
+ssh
 
 git branch dev
 git branch 
