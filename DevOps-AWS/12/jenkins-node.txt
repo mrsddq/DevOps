@@ -1,3 +1,5 @@
+
+
 jenkins-image creation/replication via AMI
 
 ip addr

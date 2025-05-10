@@ -1,8 +1,7 @@
 su ansadmin //switch user to ansible-admin
 cd /etc/ansible //switching directory to access to host-file
 sudo nano hosts //edit the file to introduce
-if mentioning name write in this manner [server-2
-]
+if mentioning name write in this manner [server-2]
 //-m(module) -a(argument) 
 ansible -m shell -a "uptime" server-2 //this is an Adhoc-Command (Key-Word;Module;Module-Name;OS-Command;
 Target-server-Group)

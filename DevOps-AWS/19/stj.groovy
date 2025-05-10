@@ -12,7 +12,20 @@ pipeline {
                 git branch: 'main', credentialsId: 'git-credentials', url: 'https://github.com/mrsddq/my-app-demo.git'
             }
         }
-
+        stage('sonar') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
+        }
+        stage('Quality Gate') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
         stage('maven-package') {
             steps {
                 sh 'mvn clean compile package'
@@ -31,4 +44,3 @@ pipeline {
         }
     }
 }
-
